@@ -20,3 +20,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/mahasiswa', [App\Http\Controllers\MahasiswaController::class, 'index'])->name('mahasiswa');
+Route::post('/mahasiswa/create',[\App\Http\Controllers\MahasiswaController::class,'create'])->name('mahasiswa');
