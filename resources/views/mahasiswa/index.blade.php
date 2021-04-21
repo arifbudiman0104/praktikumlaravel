@@ -22,8 +22,7 @@
             </div>
             <div class="col-6">
                 <!--Button trigger modal-->
-                <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal"
-                    data-target="#exampleModal">
+                <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModal">
                     Tambah Data
                 </button>
             </div>
@@ -34,6 +33,7 @@
                     <th>NIM</th>
                     <th>ALAMAT</th>
                     <th>AKSI</th>
+                    <th></th>
                 </tr>
                 @foreach($data_mahasiswa as $mahasiswa)
                 <tr>
@@ -41,6 +41,7 @@
                     <td>{{$mahasiswa->nim}}</td>
                     <td>{{$mahasiswa->alamat}}</td>
                     <td><a href="/mahasiswa/{{$mahasiswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a></td>
+                    <td><a href="/mahasiswa/delete/{{$mahasiswa->id}}" class="btn btn-danger btn-sm" onclick="return confirm('yakin mau dihapus?')">Delete</a></td>
 
                 </tr>
                 @endforeach
@@ -64,18 +65,15 @@
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nama</label>
-                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="EmailHelp" placeholder="Nama">
+                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="EmailHelp" placeholder="Nama">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">NIM</label>
-                            <input name="nim" type="text" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="EmailHelp" placeholder="NIM">
+                            <input name="nim" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="EmailHelp" placeholder="NIM">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Alamat</label>
-                            <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1"
-                                rows="3"></textarea>
+                            <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
 
                         <div class="modal-footer">
@@ -88,8 +86,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" cross origin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" cross origin="anonymous">
     </script>
 </body>
 @endsection
