@@ -9,7 +9,10 @@ class MahasiswaController extends Controller
     public function index(Request $request)
     {
         if ($request->has('cari')) {
-            $data_mahasiswa = \App\Models\Mahasiswa::where('nama', 'LIKE', '%' . $request->cari . '%')->orWhere('nim', 'LIKE', '%' . $request->cari . '%')->orWhere('alamat', 'LIKE', '%' . $request->cari . '%')->get();
+            $data_mahasiswa = \App\Models\Mahasiswa::where('nama', 'LIKE', '%' . $request->cari . '%')
+                ->orWhere('nim', 'LIKE', '%' . $request->cari . '%')
+                ->orWhere('alamat', 'LIKE', '%' . $request->cari . '%')
+                ->get();
         } else {
             $data_mahasiswa = \App\Models\Mahasiswa::all();
         }
