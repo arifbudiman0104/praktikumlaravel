@@ -28,7 +28,7 @@
                 <div class="container ">
                     <div class="row-md-5">
                         <form class="form-inline my-2 my-lg-0" method="GET" action="/mahasiswa">
-                            <input name="cari" class="form-control w-75 mr-4" id="search" placeholder="Cari nama">
+                            <input name="cari" class="form-control w-75 mr-4" id="search" placeholder="Cari">
                             <button type="submit" class="btn btn-outline-secondary my-3 mx-2">Cari</button>
                         </form>
                     </div>
