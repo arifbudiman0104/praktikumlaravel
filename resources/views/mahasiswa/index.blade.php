@@ -54,6 +54,7 @@
                             </tr>
                         @endforeach
                     </table>
+                    <a href="/mahasiswa/exportpdf" class="btn btn-sm btn-success">Export PDF</a>
                     {{-- {{$data_mahasiswa->links('pagination::bootstrap-4')}} --}}
                 </div>
             </div>
